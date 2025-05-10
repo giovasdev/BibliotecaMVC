@@ -1,4 +1,3 @@
-// Modelo base: ElementoBiblioteca.java
 package com.biblioteca.model;
 
 public abstract class ElementoBiblioteca {
@@ -8,7 +7,7 @@ public abstract class ElementoBiblioteca {
     private int anoPublicacion;
     private String tipo;
 
-    // Constructor
+    // Constructor completo
     public ElementoBiblioteca(int id, String titulo, String autor, int anoPublicacion, String tipo) {
         this.id = id;
         this.titulo = titulo;
@@ -17,7 +16,7 @@ public abstract class ElementoBiblioteca {
         this.tipo = tipo;
     }
 
-    // Constructor sin ID (para nuevos elementos)
+    // Constructor sin ID
     public ElementoBiblioteca(String titulo, String autor, int anoPublicacion, String tipo) {
         this(-1, titulo, autor, anoPublicacion, tipo);
     }
@@ -65,6 +64,6 @@ public abstract class ElementoBiblioteca {
 
     @Override
     public String toString() {
-        return titulo + " (" + anoPublicacion + ") - " + autor;
+        return titulo + " (" + anoPublicacion + ")";
     }
 }
